@@ -7,7 +7,7 @@ div .grid{
 	border: 1px solid black;
 }
 
-div .colored {
+div .blackFill{
 	background-color: black;
 }
 
@@ -19,9 +19,13 @@ div .colored {
 	height: 600px;
 }
 
-#reset {
+#buttons {
 	position: relative;
-	left: 45%;
+	width: 75%;
+	left: 12.5%;
+	text-align: center;
+}
+button {
 	padding: 10px 20px;
-	margin: 20px 0; 
+	margin: 20px 10px; 
 }

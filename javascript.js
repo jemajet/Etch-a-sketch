@@ -1,5 +1,11 @@
 console.log("hey");
 
+let fillColor = "black";
+
+function randomInt(n) {
+	return Math.floor(Math.random()*n);
+}
+
 function createGrids(gridsPerSide) {
 	container = document.querySelector("#container");
 	// container.style.backgroundColor = "lightpink";
@@ -14,7 +20,16 @@ function createGrids(gridsPerSide) {
 			newGrid.style.gridColumnEnd = "span 1";
 			newGrid.style.gridRowEnd = "span 1";
 			newGrid.addEventListener("mouseover", function() {
-				newGrid.classList.add("colored");
+				if (fillColor === "random") {
+					red = randomInt(256).toString(16);
+					green = randomInt(256).toString(16);
+					blue = randomInt(256).toString(16);
+					newGrid.style.backgroundColor = "#" + red + green + blue;
+				} else if (fillColor === "shade") {
+					newGrid.classList.add("blackFill");
+				} else {
+					newGrid.classList.add("blackFill");
+				}
 			});
 			container.appendChild(newGrid);
 		}
@@ -35,3 +50,13 @@ createGrids(16);
 createGrids(14);
 let resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", reset);
+
+let blackBtn = document.querySelector("#black");
+blackBtn.addEventListener("click", function() {
+	fillColor = "black";
+});
+
+let randomBtn = document.querySelector("#random");
+randomBtn.addEventListener("click", function() {
+	fillColor = "random";
+});
