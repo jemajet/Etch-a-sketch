@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+div .grid{
+	border: 1px solid black;
+}
+
+div .colored {
+	background-color: black;
+}
+
+#container {
+	display: grid;
+	position: relative;
+	width: 75%;
+	left: 12.5%;
+	height: 600px;
+}
+
+#reset {
+	position: relative;
+	left: 45%;
+	padding: 10px 20px;
+	margin: 20px 0; 
+}
